@@ -319,8 +319,37 @@ h5 {
 
 
 /* At 850 width change*/
+/* At 850 width change*/
 @media only screen and (max-width: 850px) {
+    body,html {
+        font-size: 90%;
+    }
+    a {
+        font-size: 30%;
+    }
     .card-body {
         display: none;
+    }
+    h1 {
+        font-size: 120%;
+    }
+    .disastersCard {
+        font-size: 90%;
+    }
+    .disastersCard p {
+        display: none;
+    }
+    .leftDisplay {
+        display: none;
+    }
+    .rightDisplay {
+        width: 100%;
+    }
+    #topStories {
+        grid-template-columns: 1fr;
+    }
+
+    .quickInfo {
+        font-size: 300%;
     }
 }
