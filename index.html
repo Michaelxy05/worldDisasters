@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Natural Disasters Tracker</title>
+</head>
+
+<body>
+
+<!-- 
+    
+    Nav Bar 
+-->
+    <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand col-9">Natural Disasters Around the World</a>
+            <a class="col-2 locationSurvey">Location Poll</a>
+    </nav>
+
+    <br>
+
+<!-- 
+    Main Page 
+-->
+<div class="mainPage">
+    <div class="container col-11">
+        <h2>Top Events</h2>
+    </div>
+    <div id="topStories">
+        <a class="rightDisplay" target="_blank">
+            <img class='rightImage' src="https://www.pixelstalk.net/wp-content/uploads/images1/2048x1420-tornado-wallpaper-widescreen-620x430.jpg" alt="">
+            <div class="quickInfo">
+                <div class="title">Title</div>
+                <div class="description"></div>
+            </div>
+        </a>
+        <div class="leftDisplay">
+            <a class="leftImages" id="topLeft" target="_blank">
+                <img class="leftImagesTL" src="http://vunature.com/wp-content/uploads/2016/11/space-hurricane-clouds-weather-sky-storm-disaster-pictures-nature-hd.jpg" alt="">
+                <div class="quickInfo">
+                    <div class="titleTL">Title</div>
+                    <div class="descriptionTL"></div>
+                </div>
+            </a>
+            <a class="leftImages" id="topRight" target="_blank">
+                <img class="leftImagesTR" src="https://img-aws.ehowcdn.com/877x500p/s3-us-west-1.amazonaws.com/contentlab.studiod/getty/2439e5e021ae4f229f2e25b029002e6e" alt="">
+                <div class="quickInfo">
+                    <div class="titleTR">Title</div>
+                    <div class="descriptionTR"></div>
+                </div>
+            </a>
+            <a class="leftImages" id="botLeft" target="_blank">
+                <img class="leftImagesBL" src="https://dc95wa4w5yhv.cloudfront.net/image-cache/Why-does-God-allow-natural-disasters-1_825_460_80_c1.jpg" alt="">
+                <div class="quickInfo">
+                    <div class="titleBL">Title</div>
+                    <div class="descriptionBL"></div>
+                </div>
+            </a>
+            <a class="leftImages" id="botRight" target="_blank">
+                <img class="leftImagesBR" src="https://static.euronews.com/articles/414103/880x495_414103.jpg" alt="">
+                <div class="quickInfo">
+                    <div class="titleBR">Title</div>
+                    <div class="descriptionBR"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+        <br>
+        <div class="container col-3">
+            <h2>Natural Disasters</h2>
+        </div>
+        <div class="container col-9" id="naturalDisastersContainer">
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/earthquakes.png" alt="Card image cap" id="earthquakesImg">
+                <div class="card-body">
+                    <p class="card-text">Earthquake</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/floods.png" alt="Card image cap" id="floodsImg">
+                <div class="card-body">
+                    <p class="card-text">Flood</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/wildFires.png" alt="Card image cap" id="wildFiresImg">
+                <div class="card-body">
+                    <p class="card-text">Wild Fire</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/hurricanes.png" alt="Card image cap" id="hurricaneImg">
+                <div class="card-body">
+                    <p class="card-text">Hurricane</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/landslides.png" alt="Card image cap" id="landslideImg">
+                <div class="card-body">
+                    <p class="card-text">Landslide</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/tornados.png" alt="Card image cap" id="tornadosImg">
+                <div class="card-body">
+                    <p class="card-text">Tornado</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/volcano.png" alt="Card image cap" id="volcanoImg">
+                <div class="card-body">
+                    <p class="card-text">Volcano</p>
+                </div>
+            </div>
+            <div class="card disastersCard">
+                <img class="card-img-top" src="assets/images/heatwave.png" alt="Card image cap" id="avalancheImg">
+                <div class="card-body">
+                    <p class="card-text">Heat-Wave</p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+    Article Page 
+-->
+    <div class="articlePage">
+        <h1 class="text-center" id="articlePageTitle">Earthquakes</h1>
+        <br>
+<!-- 
+    Google Map 
+-->
+        <div id="map"></div>
+        <br>
+        <div class="container articleContainer col-11">
+                <div class="iconCol text-center">
+                    <div class="iconColImg disastersCard" name="earthquake">
+                        <img src="assets/images/earthquakes.png" alt="Card image cap" id="earthquakesImg">
+                        <p>Earthquake</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/floods.png" alt="Card image cap" id="floodsImg">
+                        <p>Flood</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/wildFires.png" alt="Card image cap" id="wildFiresImg">
+                        <p>Wild Fire</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/hurricanes.png" alt="Card image cap" id="hurricaneImg">
+                        <p>Hurricane</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/landslides.png" alt="Card image cap" id="landslideImg">
+                        <p>Landslide</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/tornados.png" alt="Card image cap" id="tornadosImg">
+                        <p>Tornado</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/volcano.png" alt="Card image cap" id="volcanoImg">
+                        <p>Volcano</p>
+                    </div>
+                    <div class="iconColImg disastersCard">
+                        <img src="assets/images/heatwave.png" alt="Card image cap" id="avalancheImg">
+                        <p>Heat-Wave</p>
+                    </div>
+                </div>
+                <br>
+                <div class="articleCol col-10">
+
+                </div>
+        </div>
+    </div>
+    <br>
+
+<!-- 
+    Survey 
+-->
+    <div class="surveyPage">
+        <!-- Add place form -->
+        <div class="container col-11 addPlaceContainer">
+            <div class="card">
+                <div class="card-header addPlace">
+                    <a id="pointer" data-toggle="collapse" data-target="#addPlaceForm" aria-expanded="false" aria-controls="collapseExample">
+                        <span>Add a Place and Vote</span><span id='toggleCollapse'> (Click to expand)</span>
+                    </a>
+                </div>
+                <div class="card-body collapse" id="addPlaceForm">
+                    <form>
+                        <div class="form-group">
+                            <label for="locationName">Location Name</label>
+                            <input type="text" class="form-control" id="locationName" placeholder="Enter a location">
+                        </div>
+                        <div class="form-group justify-content-end" id='addTrain'>
+                            <button type="button" class="btn btn-light" id="addPlaceBtn" data-toggle="modal" data-target="#modal">Add Place</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- display graph -->
+        <div class="container col-11">
+            <h3>Place Visited</h3>
+            <div class="container graph">
+                <ul class="bargraph">
+                    <h5>Click on the Name for your vote.</h5>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modalTitle">Thank you for participating</h4>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer>
+        <div class="footerNotes">
+            <a class="navbar-views">Visitors: <span class="views"></a>
+            <p>World Natural Disasters Project ©</p>
+        </div>
+    </footer>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <!-- google map -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvmrwcu1MfSiYCO2Lv_Q9w7kyFbnRXRNA&callback=initMap">
+    </script>
+    <!-- Javascript Link -->
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
